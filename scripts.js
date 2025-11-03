@@ -380,42 +380,14 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Testimonials Carousel
-let currentTestimonial = 0;
-const testimonials = document.querySelectorAll('.testimonial-card');
-const indicators = document.querySelectorAll('.indicator');
-
-const updateTestimonials = () => {
-    testimonials.forEach((testimonial, index) => {
-        testimonial.classList.toggle('active', index === currentTestimonial);
-    });
-    indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === currentTestimonial);
-    });
-};
-
-document.getElementById('next-testimonial').addEventListener('click', () => {
-    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-    updateTestimonials();
-});
-
-document.getElementById('prev-testimonial').addEventListener('click', () => {
-    currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-    updateTestimonials();
-});
-
-indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-        currentTestimonial = index;
-        updateTestimonials();
+// Enhanced Testimonials Animation
+document.addEventListener('DOMContentLoaded', () => {
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    testimonialCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.2}s`;
+        card.classList.add('stagger-fade-in');
     });
 });
-
-// Auto-play testimonials
-setInterval(() => {
-    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-    updateTestimonials();
-}, 5000);
 
 // Contact Form Validation
 const contactForm = document.getElementById('contact-form');
