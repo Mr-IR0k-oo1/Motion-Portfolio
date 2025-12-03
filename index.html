@@ -1,313 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Editor & Motion Graphics Portfolio</title>
-    <meta name="description" content="Portfolio of Alex Motion, a professional video editor and motion graphics artist showcasing creative work, skills, and services.">
-    <meta name="keywords" content="video editing, motion graphics, cinematography, color grading, portfolio">
-    <meta name="author" content="IROK EDITZZ">
-    <meta property="og:title" content="Alex Motion - Video Editor & Motion Graphics Artist">
-    <meta property="og:description" content="Bringing stories to life through innovative video editing and motion graphics.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/333/fff?text=Alex+Motion+Portfolio">
-    <meta property="og:url" content="https://alexmotion.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>MotionCraft | Premium Video Editor & Motion Graphics</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-progress">
-        <div class="scroll-progress-bar"></div>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>Crafting Visual Excellence...</p>
+        </div>
     </div>
 
-    <header>
-        <nav>
-            <div class="nav-container">
-                <h1 class="logo">IROK EDITZZ</h1>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
+    <!-- Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MotionCraft</span>
+                <span class="logo-dot">.</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link"><span>Home</span></a>
+                <a href="#about" class="nav-link"><span>About</span></a>
+                <a href="#portfolio" class="nav-link"><span>Portfolio</span></a>
+                <a href="#services" class="nav-link"><span>Services</span></a>
+                <a href="#testimonials" class="nav-link"><span>Testimonials</span></a>
+                <a href="#contact" class="nav-link"><span>Contact</span></a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <div class="theme-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </button>
+                <div class="mobile-menu-btn">
                     <span></span>
                     <span></span>
                 </div>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
-                </button>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <section id="hero">
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+            <div class="grid-overlay"></div>
         </div>
         <div class="hero-content">
-            <h2>Hello, I'm <span class="highlight">IROK</span></h2>
-            <p>Video Editor & Motion Graphics Artist</p>
-            <a href="#contact" class="cta-button">Let's Collaborate</a>
+            <div class="hero-text">
+                <div class="pre-title">
+                    <span class="pre-title-line"></span>
+                    <span>Premium Video Editor</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Crafting</span>
+                    <span class="title-line">Visual</span>
+                    <span class="title-line highlight">Masterpieces</span>
+                </h1>
+                <p class="hero-subtitle">Transforming visions into compelling visual narratives through expert video editing and motion graphics artistry.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="viewWork">
+                        <span>Explore Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary" id="contactBtn">
+                        <span>Start Project</span>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number" data-count="150">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="5">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="premium-showcase">
+                    <div class="showcase-main">
+                        <div class="video-preview">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="preview-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="showcase-thumbnails">
+                        <div class="thumbnail active"></div>
+                        <div class="thumbnail"></div>
+                        <div class="thumbnail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll to Explore</div>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <section id="about">
+    <!-- Clients Section -->
+    <section class="clients">
         <div class="container">
-            <h2>About Me</h2>
+            <div class="clients-content">
+                <p class="clients-label">Trusted By Industry Leaders</p>
+                <div class="clients-logos">
+                    <div class="client-logo">NETFLIX</div>
+                    <div class="client-logo">SONY</div>
+                    <div class="client-logo">ADOBE</div>
+                    <div class="client-logo">WARNER BROS</div>
+                    <div class="client-logo">DISNEY</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Crafting Visual Excellence</h2>
+                <p class="section-subtitle">With over 5 years of expertise in transforming ideas into captivating visual experiences</p>
+            </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a passionate video editor and motion graphics artist with over 5 years of experience creating compelling visual stories. I specialize in bringing ideas to life through seamless editing, stunning animations, and innovative visual effects.</p>
-                    <p>My work spans commercials, music videos, corporate content, and social media, always pushing the boundaries of creativity and technical excellence.</p>
-                    <!-- Animated Counters -->
-                    <div class="stats-container">
-                        <div class="stat-item">
-                            <div class="counter" data-target="5">0</div>
-                            <span>Years Experience</span>
+                    <div class="about-badge">
+                        <i class="fas fa-award"></i>
+                        <span>Award-Winning Editor</span>
+                    </div>
+                    <h3>Precision in Every Frame,<br>Perfection in Every Project</h3>
+                    <p>Specializing in high-end video production, I bring cinematic quality to every project. From blockbuster commercials to intimate documentaries, my work is defined by meticulous attention to detail and innovative storytelling.</p>
+                    
+                    <div class="expertise-areas">
+                        <div class="expertise-item">
+                            <i class="fas fa-film"></i>
+                            <div>
+                                <h4>Cinematic Editing</h4>
+                                <p>Feature film precision for commercial projects</p>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <div class="counter" data-target="100">0</div>
-                            <span>Projects Completed</span>
+                        <div class="expertise-item">
+                            <i class="fas fa-sync-alt"></i>
+                            <div>
+                                <h4>Motion Design</h4>
+                                <p>Dynamic animations that tell compelling stories</p>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <div class="counter" data-target="50">0</div>
-                            <span>Happy Clients</span>
+                        <div class="expertise-item">
+                            <i class="fas fa-palette"></i>
+                            <div>
+                                <h4>Color Grading</h4>
+                                <p>Professional color treatment for visual impact</p>
+                            </div>
                         </div>
                     </div>
-                    <a href="#" class="download-resume-btn" download>
-                        <i class="fas fa-download"></i> Download Resume
-                    </a>
                 </div>
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/300x300/333/fff?text=Profile" alt="Profile Picture">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <h3><i class="fas fa-video"></i> Video Editing</h3>
-                    <ul>
-                        <li><i class="fab fa-adobe"></i> Adobe Premiere Pro</li>
-                        <li><i class="fab fa-adobe"></i> Adobe After Effects</li>
-                        <li><i class="fas fa-film"></i> DaVinci Resolve</li>
-                        <li><i class="fas fa-cut"></i> Color Grading</li>
-                    </ul>
-                </div>
-                <div class="skill-item">
-                    <h3><i class="fas fa-magic"></i> Motion Graphics</h3>
-                    <ul>
-                        <li><i class="fab fa-adobe"></i> Adobe After Effects</li>
-                        <li><i class="fas fa-cube"></i> Cinema 4D</li>
-                        <li><i class="fas fa-palette"></i> Visual Effects</li>
-                        <li><i class="fas fa-layer-group"></i> Compositing</li>
-                    </ul>
-                </div>
-                <div class="skill-item">
-                    <h3><i class="fas fa-tools"></i> Tools & Software</h3>
-                    <ul>
-                        <li><i class="fab fa-adobe"></i> Adobe Creative Suite</li>
-                        <li><i class="fas fa-camera"></i> DSLR Cinematography</li>
-                        <li><i class="fas fa-music"></i> Audio Editing</li>
-                        <li><i class="fas fa-share-alt"></i> Social Media Formats</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card" data-project="1">
-                    <i class="fas fa-play-circle project-icon"></i>
-                    <h3>Music Video - "Electric Dreams"</h3>
-                    <p>A high-energy music video with complex motion graphics and visual effects.</p>
-                    <a href="#" class="project-link" data-project="1"><i class="fas fa-external-link-alt"></i> View Project</a>
-                </div>
-                <div class="project-card" data-project="2">
-                    <i class="fas fa-building project-icon"></i>
-                    <h3>Corporate Brand Video</h3>
-                    <p>Professional corporate video with custom animations and storytelling.</p>
-                    <a href="#" class="project-link" data-project="2"><i class="fas fa-external-link-alt"></i> View Project</a>
-                </div>
-                <div class="project-card" data-project="3">
-                    <i class="fas fa-ad project-icon"></i>
-                    <h3>Commercial Spot</h3>
-                    <p>Compelling commercial advertisement with motion graphics and effects.</p>
-                    <a href="#" class="project-link" data-project="3"><i class="fas fa-external-link-alt"></i> View Project</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Lightbox Modal -->
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-body">
-                <div class="modal-media">
-                    <video controls poster="https://via.placeholder.com/800x450/333/fff?text=Project+Video">
-                        <source src="#" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="modal-info">
-                    <h3 id="modal-title"></h3>
-                    <p id="modal-description"></p>
-                    <div class="modal-details">
-                        <div class="detail-item">
-                            <strong>Client:</strong> <span id="modal-client"></span>
-                        </div>
-                        <div class="detail-item">
-                            <strong>Duration:</strong> <span id="modal-duration"></span>
-                        </div>
-                        <div class="detail-item">
-                            <strong>Tools Used:</strong> <span id="modal-tools"></span>
+                <div class="about-visual">
+                    <div class="premium-card">
+                        <div class="card-content">
+                            <div class="profile-image"></div>
+                            <div class="profile-info">
+                                <h4>Alex Morgan</h4>
+                                <p>Senior Video Editor & Motion Designer</p>
+                                <div class="profile-stats">
+                                    <div class="profile-stat">
+                                        <span class="stat-value">150+</span>
+                                        <span class="stat-label">Projects</span>
+                                    </div>
+                                    <div class="profile-stat">
+                                        <span class="stat-value">5+</span>
+                                        <span class="stat-label">Years</span>
+                                    </div>
+                                    <div class="profile-stat">
+                                        <span class="stat-value">50+</span>
+                                        <span class="stat-label">Clients</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <section id="services">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2>Services</h2>
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A curated selection of premium visual productions</p>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <span>All Works</span>
+                </button>
+                <button class="filter-btn" data-filter="commercial">
+                    <span>Commercial</span>
+                </button>
+                <button class="filter-btn" data-filter="music">
+                    <span>Music Videos</span>
+                </button>
+                <button class="filter-btn" data-filter="corporate">
+                    <span>Corporate</span>
+                </button>
+                <button class="filter-btn" data-filter="film">
+                    <span>Short Films</span>
+                </button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="commercial">
+                    <div class="portfolio-card">
+                        <div class="card-image">
+                            <div class="category-badge">Commercial</div>
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="card-hover">
+                                <h3>Luxury Automotive Campaign</h3>
+                                <p>High-end commercial for premium automobile brand</p>
+                                <button class="btn-view">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="music">
+                    <div class="portfolio-card">
+                        <div class="card-image">
+                            <div class="category-badge">Music Video</div>
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="card-hover">
+                                <h3>Urban Rhythm</h3>
+                                <p>Cinematic music video for emerging artist</p>
+                                <button class="btn-view">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="corporate">
+                    <div class="portfolio-card">
+                        <div class="card-image">
+                            <div class="category-badge">Corporate</div>
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="card-hover">
+                                <h3>Tech Innovation Summit</h3>
+                                <p>Corporate event highlights and presentations</p>
+                                <button class="btn-view">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="film">
+                    <div class="portfolio-card">
+                        <div class="card-image">
+                            <div class="category-badge">Short Film</div>
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="card-hover">
+                                <h3>Echoes of Time</h3>
+                                <p>Experimental narrative short film</p>
+                                <button class="btn-view">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-cta">
+                <button class="btn btn-outline">
+                    <span>View Complete Portfolio</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Premium Services</h2>
+                <p class="section-subtitle">Comprehensive video production solutions for discerning clients</p>
+            </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <i class="fas fa-video service-icon"></i>
-                    <h3>Video Editing</h3>
-                    <p>Professional video editing services including color grading, sound design, and post-production.</p>
-                    <ul>
-                        <li>Commercial Videos</li>
-                        <li>Music Videos</li>
-                        <li>Social Media Content</li>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3>Video Editing</h3>
+                    </div>
+                    <p>Professional editing for commercials, documentaries, and social media content with cinematic precision.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Multi-camera editing</li>
+                        <li><i class="fas fa-check"></i> Advanced color grading</li>
+                        <li><i class="fas fa-check"></i> Professional audio mixing</li>
+                        <li><i class="fas fa-check"></i> 4K & 8K resolution support</li>
                     </ul>
+                    <div class="service-footer">
+                        <button class="btn-service">Learn More</button>
+                    </div>
+                </div>
+                <div class="service-card featured">
+                    <div class="service-badge">Most Popular</div>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3>Motion Graphics</h3>
+                    </div>
+                    <p>Dynamic animations and visual effects that elevate your brand storytelling to new heights.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 2D/3D animation</li>
+                        <li><i class="fas fa-check"></i> Logo animation</li>
+                        <li><i class="fas fa-check"></i> Infographic videos</li>
+                        <li><i class="fas fa-check"></i> Visual effects</li>
+                    </ul>
+                    <div class="service-footer">
+                        <button class="btn-service">Learn More</button>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-magic service-icon"></i>
-                    <h3>Motion Graphics</h3>
-                    <p>Stunning motion graphics and visual effects to bring your ideas to life.</p>
-                    <ul>
-                        <li>Logo Animations</li>
-                        <li>Title Sequences</li>
-                        <li>Infographics</li>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>Visual Effects</h3>
+                    </div>
+                    <p>Seamless VFX integration for film, television, and digital content with Hollywood-grade quality.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Advanced compositing</li>
+                        <li><i class="fas fa-check"></i> Green screen keying</li>
+                        <li><i class="fas fa-check"></i> Particle effects</li>
+                        <li><i class="fas fa-check"></i> CGI integration</li>
                     </ul>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-camera service-icon"></i>
-                    <h3>Cinematography</h3>
-                    <p>High-quality video production and cinematography services.</p>
-                    <ul>
-                        <li>Event Coverage</li>
-                        <li>Product Shoots</li>
-                        <li>Documentary Style</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-palette service-icon"></i>
-                    <h3>Color Grading</h3>
-                    <p>Professional color correction and grading to enhance your visuals.</p>
-                    <ul>
-                        <li>Film Looks</li>
-                        <li>Brand Consistency</li>
-                        <li>Creative Grading</li>
-                    </ul>
+                    <div class="service-footer">
+                        <button class="btn-service">Learn More</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="testimonials">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2>What Clients Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
+            <div class="section-header">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What industry leaders say about our collaboration</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
                     <div class="testimonial-content">
-                        <p>"Alex delivered beyond our expectations. The motion graphics added a whole new dimension to our brand video."</p>
-                        <div class="testimonial-author">
-                            <img src="https://via.placeholder.com/60x60/333/fff?text=JD" alt="John Doe">
-                            <div>
-                                <h4>John Doe</h4>
-                                <span>CEO, TechCorp</span>
-                            </div>
-                        </div>
+                        <div class="quote-icon">"</div>
+                        <p>Absolutely stunning work! The attention to detail and creative vision brought our project to life in ways we never imagined. A true professional who delivers beyond expectations.</p>
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="testimonial-content">
-                        <p>"Incredible attention to detail and creativity. Our music video came out stunning thanks to Alex's expertise."</p>
-                        <div class="testimonial-author">
-                            <img src="https://via.placeholder.com/60x60/333/fff?text=JS" alt="Jane Smith">
-                            <div>
-                                <h4>Jane Smith</h4>
-                                <span>Music Producer</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="testimonial-content">
-                        <p>"Professional, timely, and innovative. Alex transformed our raw footage into a compelling story."</p>
-                        <div class="testimonial-author">
-                            <img src="https://via.placeholder.com/60x60/333/fff?text=MB" alt="Mike Brown">
-                            <div>
-                                <h4>Mike Brown</h4>
-                                <span>Marketing Director</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="testimonial-content">
-                        <p>"Outstanding work! Alex's editing skills brought our vision to life perfectly."</p>
-                        <div class="testimonial-author">
-                            <img src="https://via.placeholder.com/60x60/333/fff?text=SA" alt="Sarah Anderson">
-                            <div>
-                                <h4>Sarah Anderson</h4>
-                                <span>Creative Director</span>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Marketing Director, TechCorp</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
                         </div>
                     </div>
@@ -316,119 +398,128 @@
         </div>
     </section>
 
-    <section id="blog">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-            <h2>Latest from the Blog</h2>
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <img src="https://via.placeholder.com/400x250/333/fff?text=Blog+1" alt="Blog Post 1">
-                    <div class="blog-content">
-                        <h3>The Art of Color Grading</h3>
-                        <p>Explore the techniques and tools used in professional color grading to enhance visual storytelling.</p>
-                        <a href="#" class="blog-link">Read More</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://via.placeholder.com/400x250/333/fff?text=Blog+2" alt="Blog Post 2">
-                    <div class="blog-content">
-                        <h3>Motion Graphics Trends 2024</h3>
-                        <p>Discover the latest trends in motion graphics and how they're shaping the future of visual content.</p>
-                        <a href="#" class="blog-link">Read More</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://via.placeholder.com/400x250/333/fff?text=Blog+3" alt="Blog Post 3">
-                    <div class="blog-content">
-                        <h3>From Script to Screen: Video Production Process</h3>
-                        <p>A behind-the-scenes look at the complete video production workflow from concept to final cut.</p>
-                        <a href="#" class="blog-link">Read More</a>
-                    </div>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">Start Your Project</h2>
+                <p class="section-subtitle">Let's create something extraordinary together</p>
             </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <p>Ready to bring your vision to life? Let's create something amazing together!</p>
-                    <ul>
-                        <li>Email: alexmotion@example.com</li>
-                        <li>Phone: (+1) 555-0123</li>
-                        <li>Location: Los Angeles, CA</li>
-                    </ul>
+                    <div class="contact-header">
+                        <h3>Get In Touch</h3>
+                        <p>Ready to bring your vision to life? Let's discuss your project.</p>
+                    </div>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>hello@motioncraft.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Studio</h4>
+                                <p>Los Angeles, California</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-vimeo-v"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
                 </div>
-                <form class="contact-form" id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" id="name" placeholder="Your Name" required>
-                        <span class="error-message" id="name-error"></span>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" id="email" placeholder="Your Email" required>
-                        <span class="error-message" id="email-error"></span>
+                        <input type="text" placeholder="Project Type" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                        <span class="error-message" id="subject-error"></span>
+                        <textarea placeholder="Tell us about your project..." rows="5" required></textarea>
                     </div>
-                    <div class="form-group">
-                        <textarea name="message" id="message" placeholder="Project Details" required></textarea>
-                        <span class="error-message" id="message-error"></span>
-                    </div>
-                    <button type="submit" id="submit-btn">Send Message</button>
-                    <div class="form-status" id="form-status"></div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>ALEX MOTION</h3>
-                    <p>Bringing stories to life through innovative video editing and motion graphics.</p>
+                <div class="footer-brand">
+                    <h3>MotionCraft<span class="brand-dot">.</span></h3>
+                    <p>Creating motion that inspires and transforms</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Me</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link" data-platform="instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link" data-platform="linkedin"><i class="fab fa-linkedin"></i></a>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <a href="#">Video Editing</a>
+                        <a href="#">Motion Graphics</a>
+                        <a href="#">Visual Effects</a>
+                        <a href="#">Color Grading</a>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>Email: irokeditzz1@gmail.com</p>
-                    <p>Phone: (+91) 63744 61408</p>
-                    <p>Location: Tamil Nadu, IN</p>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Portfolio</a>
+                        <a href="#">Testimonials</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <a href="#">Instagram</a>
+                        <a href="#">Vimeo</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">YouTube</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Alex Motion. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
+                <p>&copy; 2024 MotionCraft. All rights reserved. Crafted with precision.</p>
             </div>
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
